@@ -8,6 +8,8 @@ import db from "./Database";
 
 
 function Kanbas() {
+  console.log(db);
+  console.log(db.courses);
   return (
     <div>
       <div className="row">
