@@ -84,5 +84,6 @@
     background-color: red; /* light grey */
     border-color: red;     /* slightly darker grey for the border */
     color: white;               /* black text color */
-    margin-right: 4px
+    margin-right: 4px;
+    margin-bottom: 6px;
 }
