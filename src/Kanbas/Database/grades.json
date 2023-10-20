@@ -2,103 +2,360 @@
     {
       "_id": "1",
       "student": "121",
-      "assignment": "A101",
+      "course":"RS101",
+      "assignment": "101",
+      "grade": "90"
+    },
+
+    {
+      "_id": "2",
+      "student": "121",
+      "course":"RS101",
+      "assignment": "102",
       "grade": "90"
     },
     {
-      "_id": "2",
-      "student": "122",
-      "assignment": "A101",
-      "grade": "91"
-    },
-    {
       "_id": "3",
-      "student": "123",
-      "assignment": "A101",
-      "grade": "92"
+      "student": "121",
+      "course":"RS101",
+      "assignment": "103",
+      "grade": "90"
     },
     {
       "_id": "4",
       "student": "121",
-      "assignment": "A101",
-      "grade": "92"
+      "course":"RS101",
+      "assignment": "104",
+      "grade": "91"
     },
+
+
     {
       "_id": "5",
       "student": "122",
-      "assignment": "A101",
+      "course":"RS101",
+      "assignment": "101",
       "grade": "91"
     },
     {
       "_id": "6",
-      "student": "123",
-      "assignment": "A201",
-      "grade": "90"
+      "student": "122",
+      "course":"RS101",
+      "assignment": "102",
+      "grade": "91"
     },
     {
       "_id": "7",
-      "student": "124",
-      "assignment": "A201",
-      "grade": "80"
+      "student": "122",
+      "course":"RS101",
+      "assignment": "103",
+      "grade": "91"
     },
+
     {
       "_id": "8",
-      "student": "125",
-      "assignment": "A201",
-      "grade": "81"
+      "student": "122",
+      "course":"RS101",
+      "assignment": "104",
+      "grade": "91"
     },
+
     {
       "_id": "9",
-      "student": "126",
-      "assignment": "A201",
-      "grade": "82"
+      "student": "121",
+      "course":"RS101",
+      "assignment": "104",
+      "grade": "91"
     },
+
     {
       "_id": "10",
-      "student": "124",
-      "assignment": "A201",
-      "grade": "82"
+      "student": "123",
+      "course":"RS101",
+      "assignment": "101",
+      "grade": "92"
     },
     {
       "_id": "11",
-      "student": "125",
-      "assignment": "A201",
-      "grade": "81"
+      "student": "123",
+      "course":"RS101",
+      "assignment": "102",
+      "grade": "92"
     },
     {
       "_id": "12",
-      "student": "126",
-      "assignment": "A301",
-      "grade": "90"
+      "student": "123",
+      "course":"RS101",
+      "assignment": "103",
+      "grade": "92"
     },
+
     {
       "_id": "13",
-      "student": "127",
-      "assignment": "A301",
-      "grade": "90"
+      "student": "123",
+      "course":"RS101",
+      "assignment": "104",
+      "grade": "92"
     },
     {
       "_id": "14",
-      "student": "128",
-      "assignment": "A301",
-      "grade": "93"
+      "student": "121",
+      "course":"RS101",
+      "assignment": "104",
+      "grade": "91"
     },
+   
     {
       "_id": "15",
-      "student": "129",
-      "assignment": "A301",
-      "grade": "95"
+      "student": "124",
+      "course":"RS101",
+      "assignment": "101",
+      "grade": "80"
     },
     {
       "_id": "16",
-      "student": "130",
-      "assignment": "A301",
-      "grade": "98"
+      "student": "124",
+      "course":"RS101",
+      "assignment": "102",
+      "grade": "83"
     },
     {
       "_id": "17",
+      "student": "124",
+      "course":"RS101",
+      "assignment": "103",
+      "grade": "88"
+    },
+    {
+      "_id": "18",
+      "student": "124",
+      "course":"RS101",
+      "assignment": "104",
+      "grade": "88"
+    },
+
+    {
+      "_id": "19",
+      "student": "125",
+      "course":"RS101",
+      "assignment": "101",
+      "grade": "90"
+    },
+    {
+      "_id": "20",
+      "student": "125",
+      "course":"RS101",
+      "assignment": "102",
+      "grade": "95"
+    },
+    {
+      "_id": "21",
+      "student": "125",
+      "course":"RS101",
+      "assignment": "103",
+      "grade": "90"
+    },
+    {
+      "_id": "22",
+      "student": "125",
+      "course":"RS101",
+      "assignment": "104",
+      "grade": "90"
+    },
+
+    {
+      "_id": "23",
+      "student": "126",
+      "course":"RS102",
+      "assignment": "201",
+      "grade": "82"
+    },
+  
+    {
+      "_id": "24",
+      "student": "126",
+      "course":"RS102",
+      "assignment": "202",
+      "grade": "90"
+    },
+    {
+      "_id": "25",
+      "student": "126",
+      "course":"RS102",
+      "assignment": "203",
+      "grade": "90"
+    },
+
+    {
+      "_id": "26",
+      "student": "127",
+      "course":"RS103",
+      "assignment": "301",
+      "grade": "90"
+    },
+    {
+      "_id": "27",
+      "student": "127",
+      "course":"RS103",
+      "assignment": "302",
+      "grade": "90"
+    },
+    {
+      "_id": "28",
+      "student": "127",
+      "course":"RS103",
+      "assignment": "303",
+      "grade": "90"
+    },
+
+    {
+      "_id": "29",
+      "student": "127",
+      "course":"RS102",
+      "assignment": "201",
+      "grade": "90"
+    },
+    {
+      "_id": "30",
+      "student": "127",
+      "course":"RS102",
+      "assignment": "202",
+      "grade": "90"
+    },
+    {
+      "_id": "31",
+      "student": "127",
+      "course":"RS102",
+      "assignment": "203",
+      "grade": "90"
+    },
+
+    {
+      "_id": "32",
+      "student": "128",
+      "course":"RS102",
+      "assignment": "201",
+      "grade": "93"
+    },
+    {
+      "_id": "33",
+      "student": "128",
+      "course":"RS102",
+      "assignment": "202",
+      "grade": "93"
+    },
+    {
+      "_id": "34",
+      "student": "128",
+      "course":"RS102",
+      "assignment": "203",
+      "grade": "93"
+    },
+
+
+    {
+      "_id": "35",
+      "student": "128",
+      "course":"RS103",
+      "assignment": "301",
+      "grade": "93"
+    },
+    {
+      "_id": "36",
+      "student": "128",
+      "course":"RS103",
+      "assignment": "302",
+      "grade": "93"
+    },
+    {
+      "_id": "37",
+      "student": "128",
+      "course":"RS103",
+      "assignment": "303",
+      "grade": "93"
+    },
+    {
+      "_id": "38",
+      "student": "129",
+      "course":"RS103",
+      "assignment": "301",
+      "grade": "95"
+    },
+    {
+      "_id": "39",
+      "student": "129",
+      "course":"RS103",
+      "assignment": "302",
+      "grade": "95"
+    },
+    {
+      "_id": "40",
+      "student": "129",
+      "course":"RS103",
+      "assignment": "303",
+      "grade": "95"
+    },
+    {
+      "_id": "41",
+      "student": "130",
+      "course":"RS103",
+      "assignment": "301",
+      "grade": "98"
+    },
+    {
+      "_id": "42",
+      "student": "130",
+      "course":"RS103",
+      "assignment": "302",
+      "grade": "98"
+    },
+    {
+      "_id": "43",
+      "student": "130",
+      "course":"RS103",
+      "assignment": "303",
+      "grade": "98"
+    },
+    {
+      "_id": "44",
       "student": "131",
-      "assignment": "A301",
+      "course":"RS103",
+      "assignment": "301",
+      "grade": "98"
+    },
+    {
+      "_id": "45",
+      "student": "131",
+      "course":"RS103",
+      "assignment": "302",
+      "grade": "98"
+    },
+    {
+      "_id": "46",
+      "student": "131",
+      "course":"RS103",
+      "assignment": "303",
+      "grade": "98"
+    },
+    {
+      "_id": "47",
+      "student": "132",
+      "course":"RS103",
+      "assignment": "301",
+      "grade": "98"
+    },
+    {
+      "_id": "48",
+      "student": "132",
+      "course":"RS103",
+      "assignment": "302",
+      "grade": "98"
+    },
+    {
+      "_id": "49",
+      "student": "132",
+      "course":"RS103",
+      "assignment": "303",
       "grade": "98"
     }
   ]
