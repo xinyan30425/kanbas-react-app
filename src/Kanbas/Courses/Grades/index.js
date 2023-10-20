@@ -34,12 +34,12 @@ function Grades() {
         </div>
       </div>  
 
-      <div className="row mb-3">
-        <div className="col-md-6" style={{textAlign: 'left'}}>
+      <div className="row">
+        <div className="col-md-2">
           <strong>Student Names</strong>
         </div>
 
-        <div className="col-md-6" style={{textAlign: 'left'}}>
+        <div className="col-md-10" style={{textAlign: 'center'}}>
           <strong>Assignment Names</strong>
         </div>
       </div>
