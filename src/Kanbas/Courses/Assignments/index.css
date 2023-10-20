@@ -1,0 +1,91 @@
+/* Hide Bootstrap's default breadcrumb divider */
+.breadcrumb-item + .breadcrumb-item::before {
+    content: " > ";   /* Add your desired character or symbol here */
+    color: #6c757d;   /* This is the default color Bootstrap uses, but you can adjust as needed */
+}
+
+/* If you have links in breadcrumbs, you might want to adjust spacing to make it look good */
+.breadcrumb-item a {
+    margin-right: 0.5em;
+    margin-left: 0.5em;
+    margin-bottom:20px;
+}
+
+
+.course-text {
+    color: red !important;  /* !important might be needed to override default Bootstrap link styles */
+}
+
+.courseID-text {
+    color: red !important;
+}
+
+.assignment-text {
+    color: black !important;
+}
+
+.assignment-item {
+    background-color: #f5f5f5; /* Light grey background */
+    margin-bottom: 10px;       /* Spacing between modules */
+}
+
+.assignment-title {
+    background-color: #e0e0e0; /* Slightly darker grey for the title */
+    padding: 10px;
+    margin-top: 30px; /* Removes default margins */
+}
+
+
+
+.btn.btn-secondary {
+    background-color: #f5f5f5; /* light grey */
+    border-color: #e0e0e0;     /* slightly darker grey for the border */
+    color: #000;               /* black text color */
+    margin-right: 4px;
+    height: 40px;
+
+}
+
+/* Make sure the icons inside the light grey buttons are also black */
+.btn.btn-secondary i.fas {
+    color: #000;               /* black icon color */
+}
+
+/* Change the background color of the "Module" button to red */
+.btn.assignment-button {
+    background-color: red;
+    color: #fff;        
+    margin-right: 4px;
+    height: 40px
+}
+
+/* Ensure icons inside the red button are also white */
+.btn.assignment-button i.fas {
+    color: #fff;
+}
+
+.assignment-list {
+    list-style-type: none; /* Removes bullet points */
+    padding: 10px;
+    padding-left: 20px;   /* Extra padding to align with the title */
+    border-left: 5px solid green; /* Different border color to differentiate from lessons */
+}
+
+
+/* Change the background color of all assignment items to a light color */
+.assignment-item {
+    background-color: #f5f5f5; /* AliceBlue for a subtle differentiation from modules */
+    margin-bottom: 10px;       /* Spacing between assignments */
+}
+
+.assignment-date {
+    color: grey;
+    font-size: 0.9rem;
+    margin-top: 5px; 
+}
+
+
+.action-icons {
+    display: flex;
+    align-items: center; /* Vertically centers the FontAwesome icons within the span */
+}

@@ -1,0 +1,132 @@
+[
+    {
+        "_id": "M103",
+        "name": "Week 0 - INTRO",
+        "description": "Principles of Web Development.",
+        "course": "RS101",
+        "lessons":[
+          {
+            "_id": "L101",
+            "name": "LEARNING OBJECTIVES",
+            "description": "Introduction to the course \n Learn what is Web Development \n Creating a development environment \n Getting a Web Application \n Getting started with the 1st assignment", 
+            "course": "RS101"
+          },
+          {
+            "_id": "L102",
+            "name": "READING",
+            "description": "Full Stack Developer - Chapter 1: Introduction \n Full Stack Developer - Chapter 2: Creating User Interface With HTML",
+            "course": "RS101"
+          }
+        ]
+      },
+
+      {
+        "_id": "M103",
+        "name": "Week 1 - HTML",
+        "description": "Learn how to create user interfaces with HTML",
+        "course": "RS101",
+        "lessons":[
+          {
+            "_id": "L101",
+            "name": "LEARNING OBJECTIVES",
+            "description": "Learn how to create user interfaces with HTML \n Keep working on assignment 1 \n Deploy the assignment to Netlify",
+            "course": "RS101"
+          },
+          {
+            "_id": "L102",
+            "name": "READING",
+            "description": "Full Stack Developer - Chapter 1: Introduction \n Full Stack Developer - Chapter 2: Creating User Interface With HTML",
+            "course": "RS101"
+          }
+        ]
+      },
+
+
+
+    {
+      "_id": "M201",
+      "name": "Week 0 - Introduction to Software Engineering",
+      "description": "Introduce terms and establish foundational information needede to understand future modules",
+      "course": "RS102",
+      "lessons":[
+        {
+          "_id": "L101",
+          "name": "LEARNING OBJECTIVES",
+          "description": "Overview of Software Engineering", 
+          "course": "RS101"
+        },
+        {
+          "_id": "L102",
+          "name": "READING",
+          "description": "Software Development - Chapter 1: Introduction",
+          "course": "RS101"
+        }
+      ]
+    },
+
+
+    {
+      "_id": "M202",
+      "name": "Week 1 - Software Development Teams and Project Selection",
+      "description": "Select Projects and form team",
+      "course": "RS102","lessons":[
+        {
+          "_id": "L101",
+          "name": "LEARNING OBJECTIVES",
+          "description": "Make an appointment with client and talk about requirements", 
+          "course": "RS101"
+        },
+        {
+          "_id": "L102",
+          "name": "READING",
+          "description": "Software Development - Chapter 2: Design Pattern",
+          "course": "RS101"
+        }
+      ]
+    },
+
+
+
+    {
+      "_id": "M301",
+      "name": "Week 0 - INTRO",
+      "description": "Introduction to Cloud Computing.",
+      "course": "RS103",
+      "lessons":[
+        {
+          "_id": "L101",
+          "name": "LEARNING OBJECTIVES",
+          "description": "Introduce the foundamental concepts of Cloud Computing \n History of cloud computing \n Various cloud computing models", 
+          "course": "RS101"
+        },
+        {
+          "_id": "L102",
+          "name": "READING",
+          "description": "Cloud Computing - Chapter 1",
+          "course": "RS101"
+        }
+      ]
+    },
+    
+    {
+      "_id": "M302",
+      "name": "Week 1- Cloud Computing Architecture & Design",
+      "description": "Building upon the foundational knowledge of the first module, this segment delves deeper into the architectural components that make up cloud computing.",
+      "course": "RS103",
+      "lessons":[
+        {
+          "_id": "L101",
+          "name": "LEARNING OBJECTIVES",
+          "description": "Overview of Could Computing Architeture \n Frontend and Backend Components \n Cloud Service Architectures \n Securing Cloud Architectures", 
+          "course": "RS101"
+        },
+        {
+          "_id": "L102",
+          "name": "READING",
+          "description": "Cloud Computing - Chapter 1",
+          "course": "RS101"
+        }
+      ]
+    }
+
+  ]

@@ -1,0 +1,49 @@
+/* index.css */
+
+.course-card {
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    min-width: 250px;       /* Setting minimum width */
+    max-width: 270px;       /* Setting maximum width */
+    margin: 35px auto;      /* Centering the card and adding vertical margin */
+}
+
+.course-card > div:first-child {
+    background-color: whitesmoke;
+    height: 150px;
+}
+
+.card-title a {
+    color: #007BFF; 
+    text-decoration: none;
+}
+
+.card-title a:hover {
+    text-decoration: underline;
+}
+
+.d-flex.flex-row.flex-wrap {
+    margin-left: 40px;    /* Providing left margin for the flex container */
+}
+
+.col-xl-3, .col-lg-4, .col-md-6 {
+    display: flex; /* Using flexbox to center the cards vertically and horizontally within the columns */
+    justify-content: center;
+    align-items: center;
+    padding: 15px; /* Adding padding to space out the cards */
+}
+
+.dashboard-sidebar {
+    background-color: white;
+    padding: 15px;
+}
+
+.dashboard-sidebar a.dashboard-link {
+    color: red;
+}
+
+/* Style for active navigation link */
+nav ul li a.active {
+    color: red;
+    background-color: white;
+}

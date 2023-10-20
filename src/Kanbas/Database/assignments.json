@@ -1,0 +1,74 @@
+[
+  {
+    "_id": "A101",
+    "title": "ASSIGNMENT",
+    "course": "RS101",
+    "description": [
+      {
+        "name": "A1 - ENV + HTML",
+        "date": "Multiple Modules | Due Sep 18 at 11:59pm | 100 pts",
+        "course": "RS101"
+      },
+      {
+      
+        "name": "A2 - CSS + BOOTSTRAPL",
+        "date": "Multiple Modules | Due Sep 18 at 11:59pm | 100 pts",
+        "course": "RS101"
+      },
+      {
+        "name": "A3 JS",
+        "date": "Multiple Modules | Due Sep 18 at 11:59pm | 100 pts",
+        "course": "RS101"
+      },
+      {
+        "name": "A4",
+        "date": "Multiple Modules | Due Sep 18 at 11:59pm | 100 pts",
+        "course": "RS101"
+      }
+    ]
+  },
+  {
+    "_id": "A201",
+    "title": "Lab1",
+    "course": "RS102",
+    "description": [
+      {
+        "name": "Lab1 - Functional vs NonFuncional Requirements",
+        "date": "Multiple Modules | Due Sep 18 at 11:59pm | 100 pts",
+        "course": "RS102"
+      },
+      {
+        "name": "A1 - Project Proposal",
+        "date": "Multiple Modules | Due Sep 18 at 11:59pm | 100 pts",
+        "course": "RS102"
+      },
+      {
+        "name": "A2 - Design Pattern",
+        "date": "Multiple Modules | Due Sep 18 at 11:59pm | 100 pts",
+        "course": "RS102"
+      }
+    ]
+  },
+  {
+    "_id": "A301",
+    "title": "A1",
+    "course": "RS103",
+    "description": [
+      {
+        "name": "Lab1 - Functional vs NonFuncional Requirements",
+        "date": "Multiple Modules | Due Sep 18 at 11:59pm | 100 pts",
+        "course": "RS103"
+      },
+      {
+        "name": "A1 - Cloud Computing Intro Lab",
+        "date": "Multiple Modules | Due Sep 18 at 11:59pm | 100 pts",
+        "course": "RS103"
+      },
+      {
+        "name": "A2 - SaaS",
+        "date": "Multiple Modules | Due Sep 18 at 11:59pm | 100 pts",
+        "course": "RS103"
+      }
+    ]
+  }
+]

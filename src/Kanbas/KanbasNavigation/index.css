@@ -1,0 +1,48 @@
+.wd-kanbas-navigation {
+    background-color: black;
+    width: 140px; 
+    height:100vh;
+}
+
+.wd-kanbas-navigation .list-group-item {
+    border:none;
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center; 
+    text-align: center; 
+    padding: 10px; 
+    color: white; 
+    text-decoration: none;
+    background-color: black; /* Default background color set to black */
+    transition: background 0.3s; 
+}
+
+
+.wd-kanbas-navigation .list-group-item:hover {
+    background-color: rgba(255, 255, 255, 0.1); 
+}
+
+.wd-kanbas-navigation .list-group-item.active {
+    background-color: white;  /* Background color for active link set to white */
+    color: red;  /* Text color for active link set to black */
+}
+
+.wd-kanbas-navigation .icon-container,
+.wd-kanbas-navigation .text-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px 0; 
+}
+
+.wd-kanbas-navigation .wd-icon {
+    color: red; 
+    font-size: 2em; 
+}
+
+.wd-kanbas-navigation .ac-icon {
+    color: grey; 
+    font-size: 2em; 
+}
+

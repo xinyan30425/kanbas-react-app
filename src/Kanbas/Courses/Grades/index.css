@@ -1,0 +1,90 @@
+.grade-header-container {
+    display: flex;
+    justify-content: space-between;  /* Spread content and buttons to edges */
+    align-items: center;  /* Vertically center everything */
+}
+
+.grade-header {
+    color: red;
+    margin-right: 10px;  /* Some space between the text and the icon */
+}
+
+.dropdown-icon {
+    color: red;
+}
+
+.buttons-container {
+    display: flex;
+    gap: 10px;  /* Space between buttons */
+}
+
+.btn.btn-secondary {
+    background-color: #f5f5f5; /* light grey */
+    border-color: #e0e0e0;     /* slightly darker grey for the border */
+    color: #000;               /* black text color */
+    margin-right: 4px
+
+}
+
+/* Make sure the icons inside the light grey buttons are also black */
+.btn.btn-secondary i.fas {
+    color: #000;               /* black icon color */
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title-container {
+    display: flex;
+    align-items: center;
+}
+
+.button-container {
+    display: flex;
+    gap: 10px; /* optional: creates space between the buttons */
+}
+
+.grade-header {
+    font-size: 24px; /* Adjust this value according to your preference */
+}
+.left-align-text {
+    text-align: left;
+}
+
+.input-group-text {
+    background-color: transparent;
+    border: none;
+}
+
+.input-group-text .fa {
+    margin: 0;
+    padding: 0;
+}
+
+.input-with-icons {
+    position: relative;
+}
+
+.input-with-icons input {
+    padding-left: 25px; /* space for the search icon */
+    padding-right: 25px; /* space for the dropdown icon */
+}
+
+.input-with-icons .fa-search,
+.input-with-icons .fa-caret-down {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 5;
+}
+
+.input-with-icons .fa-search {
+    left: 8px;
+}
+
+.input-with-icons .fa-caret-down {
+    right: 8px;
+}

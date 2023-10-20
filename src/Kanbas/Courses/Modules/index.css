@@ -1,0 +1,88 @@
+/* Hide Bootstrap's default breadcrumb divider */
+
+.options-bar {
+    border-bottom: 1px solid #ccc;
+    padding: 10px;
+    padding-bottom: 10px; /* Add some spacing between the buttons and the line */
+    margin-bottom: 10px; 
+}
+
+/* index.css or any other relevant CSS file */
+.breadcrumb-wrapper {
+    border-bottom: 1px solid #ccc; /* Adjust color as needed */
+}
+
+
+
+.breadcrumb-item + .breadcrumb-item::before {
+    content: " > ";   /* Add your desired character or symbol here */
+    color: #6c757d;   /* This is the default color Bootstrap uses, but you can adjust as needed */
+}
+
+/* If you have links in breadcrumbs, you might want to adjust spacing to make it look good */
+.breadcrumb-item a {
+    margin-right: 0.5em;
+    margin-left: 0.5em;
+    margin-bottom:20px;
+}
+
+
+.course-text {
+    color: red !important;  /* !important might be needed to override default Bootstrap link styles */
+}
+
+.courseID-text {
+    color: red !important;
+}
+
+.module-text {
+    color: black !important;
+}
+
+.module-item {
+    background-color: #f5f5f5; /* Light grey background */
+    margin-bottom: 10px;       /* Spacing between modules */
+}
+
+.module-title {
+    background-color: #e0e0e0; /* Slightly darker grey for the title */
+    padding: 10px;
+    margin-top: 30px; /* Removes default margins */
+}
+
+.lesson-list {
+    list-style-type: none; /* Removes bullet points */
+    padding: 10px;
+    padding-left: 20px;   /* Extra padding to align with the title */
+    border-left: 5px solid green;
+}
+
+.lesson-item {
+    margin-bottom: 10px;  /* Spacing between lessons */
+}
+
+.action-icons {
+    float: right;   /* Push the icons to the right */
+}
+
+/* Change the background color of all buttons to light grey and text color to black */
+.btn.btn-secondary {
+    background-color: #f5f5f5; /* light grey */
+    border-color: #e0e0e0;     /* slightly darker grey for the border */
+    color: #000;               /* black text color */
+    margin-right: 4px
+
+}
+
+/* Make sure the icons inside the light grey buttons are also black */
+.btn.btn-secondary i.fas {
+    color: #000;               /* black icon color */
+}
+
+
+.btn.module-button {
+    background-color: red; /* light grey */
+    border-color: red;     /* slightly darker grey for the border */
+    color: white;               /* black text color */
+    margin-right: 4px
+}

@@ -1,0 +1,15 @@
+.breadcrumb {
+    font-size: 1.5rem; /* Increase the font size. Adjust as needed. */
+    margin-top: 20px;  /* Add margin to the top. Adjust as needed. */
+    margin-bottom: 20px; /* Add margin to the bottom. Adjust as needed. */
+}
+
+.course-text, .module-text {
+    font-size: 1.5rem; /* Ensuring the individual breadcrumb items also have a larger font size. Adjust as needed. */
+}
+
+.breadcrumb-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* This will vertically align the items if they have different heights */
+}
