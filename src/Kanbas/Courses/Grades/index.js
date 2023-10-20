@@ -90,15 +90,6 @@ function Grades() {
 </div>
 
 
-
-
-
-      
-
-
-
-  
-
       <button type="button" className="btn btn-secondary"> 
         <FontAwesomeIcon icon={faFilter} /> Apply Filters
       </button>
@@ -106,22 +97,35 @@ function Grades() {
       <div className="table-responsive">
         <table className="table">
           <thead>
-            <th>Student Name</th>
-            {assignments.map((assignment) => (<th>{assignment.title}</th>))}
+          <tr>
+          <th>Student Name</th>
+          {assignments.flatMap(assignment => assignment.description).map(description => (
+          <th key={description._id}>{description.name}</th>
+          ))}
+          </tr>
           </thead>
           <tbody>
             {enrollments.map((enrollment) => {
-              const user = db.users.find((user) => user._id === enrollment.user);
+            const user = db.users.find((user) => user._id === enrollment.user);
               return (
-                <tr>
-                   <td>{user.firstName} {user.lastName}</td>
-                   {assignments.map((assignment) => {
-                     const grade = db.grades.find(
-                       (grade) => grade.student === enrollment.user && grade.assignment === assignment._id);
-                       return (<td>{grade?.grade || ""}</td>);})}
-                </tr>);
-            })}
-                      </tbody></table>
+            <tr key={user._id}>
+            <td>{user.firstName} {user.lastName}</td>
+            {assignments.flatMap(assignment => assignment.description).map(description => {
+            const grade = db.grades.find(
+              (grade) => grade.student === enrollment.user 
+              && grade.course === description.course 
+              && grade.assignment === description._id
+            );
+            return (
+              <td key={description._id}>{grade?.grade || ""}</td>
+            );
+          })}
+        </tr>
+      );
+    })}
+  </tbody>
+          </table>
+
       </div></div>);
 }
 export default Grades;
