@@ -1,7 +1,8 @@
 .wd-kanbas-navigation {
     background-color: black;
     width: 140px; 
-    height:100vh;
+    min-height:100vh;
+    position:fixed;
 }
 
 .wd-kanbas-navigation .list-group-item {

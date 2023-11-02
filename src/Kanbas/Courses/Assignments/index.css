@@ -1,10 +1,10 @@
-/* Hide Bootstrap's default breadcrumb divider */
+
 .breadcrumb-item + .breadcrumb-item::before {
-    content: " > ";   /* Add your desired character or symbol here */
-    color: #6c757d;   /* This is the default color Bootstrap uses, but you can adjust as needed */
+    content: " > ";  
+    color: #6c757d; 
 }
 
-/* If you have links in breadcrumbs, you might want to adjust spacing to make it look good */
+
 .breadcrumb-item a {
     margin-right: 0.5em;
     margin-left: 0.5em;
@@ -13,7 +13,7 @@
 
 
 .course-text {
-    color: red !important;  /* !important might be needed to override default Bootstrap link styles */
+    color: red !important; 
 }
 
 .courseID-text {
@@ -25,57 +25,53 @@
 }
 
 .assignment-item {
-    background-color: #f5f5f5; /* Light grey background */
-    margin-bottom: 10px;       /* Spacing between modules */
+    background-color: #f5f5f5; 
+    margin-bottom: 10px;
+    border-bottom:1px solid grey;
+    border-right:1px solid grey;
+    border-top:1px solid grey;
+    
 }
 
 .assignment-title {
-    background-color: #e0e0e0; /* Slightly darker grey for the title */
+    background-color: #e0e0e0; 
     padding: 10px;
-    margin-top: 30px; /* Removes default margins */
+    border-left:1px solid grey;
 }
 
-
-
-.btn.btn-secondary {
-    background-color: #f5f5f5; /* light grey */
-    border-color: #e0e0e0;     /* slightly darker grey for the border */
-    color: #000;               /* black text color */
-    margin-right: 4px;
-    height: 40px;
-
-}
-
-/* Make sure the icons inside the light grey buttons are also black */
 .btn.btn-secondary i.fas {
-    color: #000;               /* black icon color */
+    color: #000;
 }
 
-/* Change the background color of the "Module" button to red */
+
 .btn.assignment-button {
     background-color: red;
     color: #fff;        
     margin-right: 4px;
-    height: 40px
+    height: 40px;
 }
 
-/* Ensure icons inside the red button are also white */
 .btn.assignment-button i.fas {
     color: #fff;
 }
 
 .assignment-list {
-    list-style-type: none; /* Removes bullet points */
+    list-style-type: none;
     padding: 10px;
-    padding-left: 20px;   /* Extra padding to align with the title */
-    border-left: 5px solid green; /* Different border color to differentiate from lessons */
+    padding-left: 20px; 
+    border-left: 5px solid green;
 }
 
-
-/* Change the background color of all assignment items to a light color */
 .assignment-item {
-    background-color: #f5f5f5; /* AliceBlue for a subtle differentiation from modules */
-    margin-bottom: 10px;       /* Spacing between assignments */
+    background-color: #f5f5f5; 
+    margin-bottom: 10px;    
+    border-left:1px solid grey;
+}
+
+.description-item{
+    background-color: #f5f5f5;
+    margin-bottom: 10px;  
+    border-left:5px solid green;
 }
 
 .assignment-date {
@@ -87,5 +83,26 @@
 
 .action-icons {
     display: flex;
-    align-items: center; /* Vertically centers the FontAwesome icons within the span */
+    align-items: center; 
 }
+
+.assign-input-group {
+    position: relative;
+}
+
+.date-inputs {
+    gap: 15px;
+}
+
+.date-input label {
+    font-size: 0.8rem; 
+    color: gray; 
+}
+
+/* Add these styles to your stylesheet */
+@media (max-width: 768px) {
+    .assign-input-group .input-box {
+        width: 100%; /* Take full width on small screens */
+    }
+}
+

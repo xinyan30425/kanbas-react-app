@@ -12,7 +12,6 @@ function Modules() {
     const { courseId } = useParams();
     return (
         <div>
-            
         <ModuleList />
       </div>
   );

@@ -16,9 +16,7 @@ function Assignments() {
   const courseAssignments = assignments.filter(
     (assignment) => assignment.course === courseId);
   return (
-
     <div>
-
         <AssignmentList/>
     </div>
   );

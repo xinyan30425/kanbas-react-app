@@ -1,77 +1,112 @@
 [
   {
-    "_id": "A101",
-    "title": "ASSIGNMENT",
+    "_id": "101",
+    "title": "A1 - ENV + HTML",
     "course": "RS101",
-    "description": [
-      { 
-        "_id": "101",
-        "name": "A1 - ENV + HTML",
-        "course": "RS101",
-        "date": "Multiple Modules | Due Sep 18 at 11:59pm | 100 pts"
-        
-      },
-      {
-        "_id": "102",
-        "name": "A2 - CSS + BOOTSTRAPL",
-        "course": "RS101",
-        "date": "Multiple Modules | Due Sep 18 at 11:59pm | 100 pts"
-
-      },
-      { "_id": "103",
-        "name": "A3 JS",
-        "course": "RS101",
-        "date": "Multiple Modules | Due Sep 18 at 11:59pm | 100 pts"
-      },
-      { "_id": "104",
-        "name": "A4",
-        "course": "RS101",
-        "date": "Multiple Modules | Due Sep 18 at 11:59pm | 100 pts"
-      }
-    ]
+    "description":"assignment instructions available online",
+    "date": "Multiple Modules | Due Sep 18 at 11:59pm | 100 pts",
+    "points": 100,
+    "availableFrom": "Sep 10 at 12:00pm",
+    "dueDate": "Sep 18 at 11:59pm",
+    "untilDate": "Sep 20 at 11:59pm"
   },
   {
-    "_id": "A201",
-    "title": "Lab1",
+    "_id": "102",
+    "title": "A2 - CSS + BOOTSTRAPL",
+    "course": "RS101",
+    "description":"assignment instructions available online",
+    "date": "Multiple Modules | Due Sep 18 at 11:59pm | 100 pts",
+    "points": 100,
+    "availableFrom": "Sep 10 at 12:00pm",
+    "dueDate": "Sep 18 at 11:59pm",
+    "untilDate": "Sep 20 at 11:59pm"
+  },
+  {
+    "_id": "103",
+    "title": "A3 JS",
+    "course": "RS101",
+    "description":"assignment instructions available online",
+    "date": "Multiple Modules | Due Sep 18 at 11:59pm | 100 pts",
+    "points": 100,
+    "availableFrom": "Sep 10 at 12:00pm",
+    "dueDate": "Sep 18 at 11:59pm",
+    "untilDate": "Sep 20 at 11:59pm"
+  },
+  {
+    "_id": "104",
+    "title": "A4",
+    "course": "RS101",
+    "description":"assignment instructions available online",
+    "date": "Multiple Modules | Due Sep 18 at 11:59pm | 100 pts",
+    "points": 100,
+    "availableFrom": "Sep 10 at 12:00pm",
+    "dueDate": "Sep 18 at 11:59pm",
+    "untilDate": "Sep 20 at 11:59pm"
+  },
+  {
+    "_id": "201",
+    "title": "Lab1 - Functional vs NonFuncional Requirements",
     "course": "RS102",
-    "description": [
-      { "_id": "201",
-        "name": "Lab1 - Functional vs NonFuncional Requirements",
-        "date": "Multiple Modules | Due Sep 18 at 11:59pm | 100 pts",
-        "course": "RS102"
-      },
-      { "_id": "202",
-        "name": "A1 - Project Proposal",
-        "date": "Multiple Modules | Due Sep 18 at 11:59pm | 100 pts",
-        "course": "RS102"
-      },
-      { "_id": "203",
-        "name": "A2 - Design Pattern",
-        "date": "Multiple Modules | Due Sep 18 at 11:59pm | 100 pts",
-        "course": "RS102"
-      }
-    ]
+    "description":"assignment instructions available online",
+    "date": "Multiple Modules | Due Sep 18 at 11:59pm | 100 pts",
+    "points": 100,
+    "availableFrom": "Sep 10 at 12:00pm",
+    "dueDate": "Sep 18 at 11:59pm",
+    "untilDate": "Sep 20 at 11:59pm"
   },
   {
-    "_id": "A301",
-    "title": "A1",
+    "_id": "202",
+    "title": "A1 - Project Proposal",
+    "description":"assignment instructions available online",
+    "date": "Multiple Modules | Due Sep 18 at 11:59pm | 100 pts",
+    "course": "RS102",
+    "points": 100,
+    "availableFrom": "Sep 10 at 12:00pm",
+    "dueDate": "Sep 18 at 11:59pm",
+    "untilDate": "Sep 20 at 11:59pm"
+  },
+  {
+    "_id": "203",
+    "title": "A2 - Design Pattern",
+    "description":"assignment instructions available online",
+    "date": "Multiple Modules | Due Sep 18 at 11:59pm | 100 pts",
+    "course": "RS102",
+    "points": 100,
+    "availableFrom": "Sep 10 at 12:00pm",
+    "dueDate": "Sep 18 at 11:59pm",
+    "untilDate": "Sep 20 at 11:59pm"
+  },
+  {
+    "_id": "301",
+    "title": "Lab1 - Functional vs NonFuncional Requirements",
+    "description":"assignment instructions available online",
+    "date": "Multiple Modules | Due Sep 18 at 11:59pm | 100 pts",
     "course": "RS103",
-    "description": [
-      { "_id": "301",
-        "name": "Lab1 - Functional vs NonFuncional Requirements",
-        "date": "Multiple Modules | Due Sep 18 at 11:59pm | 100 pts",
-        "course": "RS103"
-      },
-      { "_id": "302",
-        "name": "A1 - Cloud Computing Intro Lab",
-        "date": "Multiple Modules | Due Sep 18 at 11:59pm | 100 pts",
-        "course": "RS103"
-      },
-      { "_id": "303",
-        "name": "A2 - SaaS",
-        "date": "Multiple Modules | Due Sep 18 at 11:59pm | 100 pts",
-        "course": "RS103"
-      }
-    ]
+    "points": 100,
+    "availableFrom": "Sep 10 at 12:00pm",
+    "dueDate": "Sep 18 at 11:59pm",
+    "untilDate": "Sep 20 at 11:59pm"
+  },
+  {
+    "_id": "302",
+    "title": "A1 - Cloud Computing Intro Lab",
+    "description":"assignment instructions available online",
+    "date": "Multiple Modules | Due Sep 18 at 11:59pm | 100 pts",
+    "course": "RS103",
+    "points": 100,
+    "availableFrom": "Sep 10 at 12:00pm",
+    "dueDate": "Sep 18 at 11:59pm",
+    "untilDate": "Sep 20 at 11:59pm"
+  },
+  {
+    "_id": "303",
+    "title": "A2 - SaaS",
+    "description":"assignment instructions available online",
+    "date": "Multiple Modules | Due Sep 18 at 11:59pm | 100 pts",
+    "course": "RS103",
+    "points": 100,
+    "availableFrom": "Sep 10 at 12:00pm",
+    "dueDate": "Sep 18 at 11:59pm",
+    "untilDate": "Sep 20 at 11:59pm"
   }
 ]
