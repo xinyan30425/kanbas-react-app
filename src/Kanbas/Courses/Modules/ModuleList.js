@@ -42,9 +42,7 @@ function ModuleList() {
                     </button>
                     <div className="dropdown-menu" aria-labelledby="dropdownMenuButton"> </div>
 
-                    <button type="button" className="btn module-button">
-                        <FontAwesomeIcon icon={faPlus} /> Module
-                    </button>
+                    <button onClick={() => dispatch(addModuleAction({ ...module, course: courseId }))} className="btn module-button"><FontAwesomeIcon icon={faPlus} /> Module</button>
 
                     <button type="button" className="btn btn-secondary">
                         <FontAwesomeIcon icon={faEllipsisV} />
