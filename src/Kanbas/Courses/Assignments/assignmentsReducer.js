@@ -4,7 +4,7 @@ console.log(db);
 console.log(db.assignments);
 
 const initialState = {
-  assignments: db.assignments,
+  assignments: [],
   assignment: {
     title: "New Assignment",course: "RS101",
     points:"100",
@@ -20,16 +20,18 @@ const assignmentsSlice = createSlice({
   initialState,
   reducers: {
     addAssignment: (state, action) => {
-      state.assignments.push({
-        ...action.payload,
-        _id: new Date().getTime().toString()
-      });
-    },
+      state.assignments=[
+        { ...action.payload, _id: new Date().getTime().toString() },
+        ...state.assignments,
+    ];
+},
+
     deleteAssignment: (state, action) => {
       state.assignments = state.assignments.filter(
         (assignment) => assignment._id !== action.payload
       );
     },
+
     updateAssignment: (state, action) => {
       state.assignments = state.assignments.map((assignment) => {
         if (assignment._id === action.payload._id) {
@@ -39,9 +41,15 @@ const assignmentsSlice = createSlice({
         }
       });
     },
+
     setAssignment: (state, action) => {
       state.assignment = action.payload;
     },
+    
+    setAssignments: (state, action) => {
+      state.assignments = action.payload;
+  },
+
   },
 });
 

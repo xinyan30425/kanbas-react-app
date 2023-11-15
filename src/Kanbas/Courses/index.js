@@ -1,3 +1,5 @@
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 import db from "../../Kanbas/Database";
 import { Navigate, Route, Routes, useParams } from "react-router-dom";
 import CourseNavigation from "./CourseNavigation";
@@ -10,9 +12,22 @@ import "./index.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars, faGlasses } from '@fortawesome/free-solid-svg-icons';
 
-function Courses({ courses }) {
+function Courses() {
   const { courseId } = useParams();
-  const course = courses.find((course) => course._id === courseId);
+  const [course, setCourse] = useState({});
+  const API_BASE = "http://localhost:4000";
+  const URL = `${API_BASE}/api/courses`;
+  const findCourseById = async (courseId) => {
+    const response = await axios.get(
+      `${URL}/${courseId}`
+    );
+    setCourse(response.data);
+  };
+  useEffect(() => {
+    findCourseById(courseId);
+  }, [courseId]);
+
+
   return (
     <div>
       {/* <h1>Course {course.name}</h1>  */}

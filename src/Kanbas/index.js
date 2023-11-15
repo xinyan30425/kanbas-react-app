@@ -5,12 +5,53 @@ import Courses from "./Courses";
 import Dashboard from "./Dashboard";
 import CourseNavigation from "./Courses/CourseNavigation";
 import db from "./Database";
-import { useState } from "react";
+import { useState,useEffect } from "react";
 import store from "./store";
 import { Provider } from "react-redux";
+import axios from "axios";
 
 function Kanbas() {
-  const [courses, setCourses] = useState(db.courses);
+  const [courses, setCourses] = useState([]);
+  const URL = "http://localhost:4000/api/courses";
+  const updateCourse = async (course) => {
+    const response = await axios.put(
+      `${URL}/${course._id}`,
+      course
+    );
+    setCourses(
+      courses.map((c) => {
+        if (c._id === course._id) {
+          return response.data;
+        }
+        return c;
+      })
+    );
+    setCourse({ name: "" });
+  };
+
+
+  const deleteCourse = async (course) => {
+    const response = await axios.delete(
+      `${URL}/${course._id}`
+    );
+    setCourses(courses.filter(
+      (c) => c._id !== course._id));
+  };
+
+  const addCourse = async () => {
+    const response = await axios.post(URL, course);
+    setCourses([
+      ...response.data,
+      ...courses,
+    ]);
+    setCourse({ name: "" });
+  };
+
+  const findAllCourses = async () => {
+  const response = await axios.get(URL);
+    setCourses(response.data);
+  };
+
   const [course, setCourse] = useState({
       name: "New Course",
       number: "New Number",
@@ -22,25 +63,10 @@ function Kanbas() {
   const [editingId, setEditingId] = useState(null);
   const [editingCourse, setEditingCourse] = useState({ name: "", _id: "", number: "", startDate: "", endDate: "" });
   
-  const addNewCourse = () => {
-      setCourses([...courses, { ...course, _id: new Date().getTime().toString() }]);
-  };
 
-  const updateCourse = () => {
-      setCourses(
-          courses.map((c) => {
-              if (c._id === course._id) {
-                  return course;
-              } else {
-                  return c;
-              }
-          })
-      );
-  };
-
-  const deleteCourse = (courseId) => {
-      setCourses(courses.filter((course) => course._id !== courseId));
-  };
+  useEffect(() => {
+    findAllCourses();
+  }, []);
 
   return (
     <Provider store={store}>
@@ -53,13 +79,13 @@ function Kanbas() {
             <Route path="Account" element={<h1>Account</h1>} />
             {/* <Route path="Dashboard" element={<Dashboard />} /> */}
             <Route path="Dashboard" element={
-            <Dashboard
-              courses={courses}
-              course={course}
-              setCourse={setCourse}
-              addNewCourse={addNewCourse}
-              deleteCourse={deleteCourse}
-              updateCourse={updateCourse}/>
+            <Dashboard/>
+            // courses={courses}
+            // course={course}
+            // setCourse={setCourse}
+            // addNewCourse={addCourse}
+            // deleteCourse={deleteCourse}
+            // updateCourse={updateCourse}
           } />
 
             {/* <Route path="Courses" element={<CourseNavigation/>} /> */}

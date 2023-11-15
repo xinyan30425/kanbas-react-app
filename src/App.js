@@ -11,8 +11,6 @@ import { faCheckCircle, faEllipsisH } from '@fortawesome/free-solid-svg-icons';
 // Add the icons to the library, so they can be used across the application
 library.add(faCheckCircle, faEllipsisH);
 
-
-
 function App() {
    return (
     <HashRouter>

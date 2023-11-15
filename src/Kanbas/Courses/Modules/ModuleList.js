@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -6,25 +6,44 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEllipsisV, faCircleCheck, faPlus, } from '@fortawesome/free-solid-svg-icons'
 import { useSelector, useDispatch } from "react-redux";
 import {
-    addModule as addModuleAction,
-    deleteModule as deleteModuleAction,
-    updateModule as updateModuleAction,
-    setModule as setModuleAction,
-
+    addModule,
+    deleteModule,
+    updateModule,
+    setModule,
+    setModules,
 } from "./modulesReducer";
-
+import { findModulesForCourse, createModule } from "./client";
+import * as client from "./client";
 
 function ModuleList() {
     const { courseId } = useParams();
-    // const [modules, setModules] = useState(db.modules);
-    // const [module, setModule] = useState({
-    //     name: "New Module",
-    //     description: "New Description",
-    //     course: courseId,
-    // });
     const modules = useSelector((state) => state.modulesReducer.modules);
     const module = useSelector((state) => state.modulesReducer.module);
     const dispatch = useDispatch();
+
+    const handleAddModule = () => {
+        client.createModule(courseId, module).then((module) => {
+            dispatch(addModule(module));
+        });
+    };
+
+    const handleDeleteModule = (moduleId) => {
+        client.deleteModule(moduleId).then((status) => {
+            dispatch(deleteModule(moduleId));
+        });
+    };
+
+    const handleUpdateModule = async () => {
+        const status = await client.updateModule(module);
+        dispatch(updateModule(module));
+    };
+
+    useEffect(() => {
+        client.findModulesForCourse(courseId)
+            .then((modules) =>
+                dispatch(setModules(modules))
+            );
+    }, [courseId]);
 
     return (
         <div className="main-content">
@@ -42,9 +61,7 @@ function ModuleList() {
                     </button>
                     <div className="dropdown-menu" aria-labelledby="dropdownMenuButton"> </div>
 
-                    <button type="button" className="btn module-button">
-                        <FontAwesomeIcon icon={faPlus} /> Module
-                    </button>
+                    <button onClick={() => dispatch(addModule({ ...module, course: courseId }))} className="btn module-button"><FontAwesomeIcon icon={faPlus} /> Module</button>
 
                     <button type="button" className="btn btn-secondary">
                         <FontAwesomeIcon icon={faEllipsisV} />
@@ -56,61 +73,21 @@ function ModuleList() {
                 <div className="module-inputs flex-grow-1">
                     <input
                         value={module.name}
-                        onChange={(e) => dispatch(setModuleAction({ ...module, name: e.target.value }))}
+                        onChange={(e) => dispatch(setModule({ ...module, name: e.target.value }))}
                         placeholder="Module Name"
                         className="form-control w-50"
                     />
                     <textarea
                         value={module.description}
-                        onChange={(e) => dispatch(setModuleAction({ ...module, description: e.target.value }))}
+                        onChange={(e) => dispatch(setModule({ ...module, description: e.target.value }))}
                         placeholder="Module Description"
                         className="form-control mt-2 mb-3 w-50 h-25"
                     />
-                    {/* <input
-                        value={module.lessons[0].name}
-                        onChange={(e) => {
-                            const updatedLessons = [...module.lessons];
-                            updatedLessons[0].name = e.target.value;
-                            dispatch(setModuleAction({ ...module, lessons: updatedLessons }));
-                        }}
-                        placeholder="Lesson Name for Lesson 1"
-                        className="form-control mt-2 mb-3 w-50"
-                    />
-                    <textarea
-                        value={module.lessons[0].description}
-                        onChange={(e) => {
-                            const updatedLessons = [...module.lessons];
-                            updatedLessons[0].description = e.target.value;
-                            dispatch(setModuleAction({ ...module, lessons: updatedLessons }));
-                        }}
-                        placeholder="Lesson 1 Description"
-                        className="form-control mt-2 mb-3 w-50 h-25"
-                    />
-                    <input
-                        value={module.lessons[1].name}
-                        onChange={(e) => {
-                            const updatedLessons = [...module.lessons];
-                            updatedLessons[1].name = e.target.value;
-                            dispatch(setModuleAction({ ...module, lessons: updatedLessons }));
-                        }}
-                        placeholder="Lesson Name for Lesson 2"
-                        className="form-control mt-2 mb-3 w-50"
-                    />
-                    <textarea
-                        value={module.lessons[1].description}
-                        onChange={(e) => {
-                            const updatedLessons = [...module.lessons];
-                            updatedLessons[1].description = e.target.value;
-                            dispatch(setModuleAction({ ...module, lessons: updatedLessons }));
-                        }}
-                        placeholder="Description for Lesson 2"
-                        className="form-control mt-2 mb-3 w-50 h-25"
-                    /> */}
                 </div>
 
                 <div className="module-actions ml-auto">
-                    <button onClick={() => dispatch(updateModuleAction(module))} className="btn btn-primary ms-2 me-2 p-1">Update</button>
-                    <button onClick={() => dispatch(addModuleAction({ ...module, course: courseId }))} className="btn btn-success me-2 p-1">Add</button>
+                    <button className="btn btn-primary mt-2 me-2" onClick={() => handleUpdateModule()}> Update </button>
+                    <button className="btn btn-success mt-2" onClick={() => handleAddModule()}>Add</button>
                 </div>
             </li>
 
@@ -125,21 +102,22 @@ function ModuleList() {
                                     <div className="title-content">
                                         {module.name}
                                         <div className="module-actions">
-                                            <button onClick={() => dispatch(deleteModuleAction(module._id))} className="btn btn-danger ms-2 me-2 mt-2 mb-2 p-1">Delete</button>
-                                            <button onClick={(event) => dispatch(setModuleAction(module))} className="btn btn-success me-2 mt-2 mb-2 p-1">Edit</button>
+                                            {/* <button onClick={() => dispatch(deleteModuleAction(module._id))} className="btn btn-danger ms-2 me-2 mt-2 mb-2 p-1">Delete</button> */}
+                                            {/* <button onClick={(event) => dispatch(setModuleAction(module))} className="btn btn-success me-2 mt-2 mb-2 p-1">Edit</button> */}
+                                            <button className="btn btn-warning me-1"
+                                                onClick={() => dispatch(setModule(module))}>
+                                                Edit
+                                            </button>
+                                            <button className="btn btn-danger"
+                                                onClick={() => handleDeleteModule(module._id)}>
+                                                Delete
+                                            </button>
+
                                         </div>
                                     </div>
                                 </h2>
                             </div>
-                            <p className="module-description">{module.description}</p>  
-
-                            {/* <span className="action-icons fa-lg" style={{ marginTop: '20px', marginBottom: '20px', marginRight: '20px' }}>
-                                <FontAwesomeIcon icon={faCheckCircle} className="text-success ms-3" />
-                                <FontAwesomeIcon icon={faCaretDown} style={{ marginLeft: '5px' }} />
-                                <FontAwesomeIcon icon={faPlus} style={{ marginLeft: '20px' }} />
-                                <FontAwesomeIcon icon={faEllipsisV} style={{ marginLeft: '20px' }} />
-                            </span> */}
-
+                            <p className="module-description">{module.description}</p>
                             {module.lessons && (
                                 <ul className="lesson-list">
                                     {module.lessons.map(lesson => (
