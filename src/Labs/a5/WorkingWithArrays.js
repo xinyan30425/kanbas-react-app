@@ -95,7 +95,8 @@ function WorkingWithArrays() {
     setTodos(updatedTodos);
   };
 
-  const API = "http://localhost:4000/a5/todos";
+  const API_BASE ="https://kanbas-node-server-app-qcmk.onrender.com";
+  const API = `${API_BASE}/a5/todos`;
 
   return (
     <div>

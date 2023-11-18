@@ -6,7 +6,9 @@ import "./index.css";
 import paper from "./paper.png";
 
 function Dashboard() {
-    const URL = "http://localhost:4000/api/courses";
+    const API_BASE  = "https://kanbas-node-server-app-qcmk.onrender.com";
+    const URL = `${API_BASE}/api/courses`;
+
     const [courses, setCourses] = useState([]);
     const [editingId, setEditingId] = useState(null);
     const [course, setCourse] = useState({
@@ -17,9 +19,8 @@ function Dashboard() {
     });
     const [errorMessage, setErrorMessage] = useState("");
 
-
     const fetchCourses = async () => {
-        const response = await axios.get("http://localhost:4000/api/courses");
+        const response = await axios.get(`${API_BASE}/api/courses`);
         setCourses(response.data);
     };
 
@@ -35,7 +36,7 @@ function Dashboard() {
     };
 
     const addCourse = async () => {
-        const response = await axios.post(URL, course);
+        const response = await axios.post(API_BASE, course);
         setCourses([
             response.data,
             ...courses,

@@ -15,7 +15,8 @@ import { faBars, faGlasses } from '@fortawesome/free-solid-svg-icons';
 function Courses() {
   const { courseId } = useParams();
   const [course, setCourse] = useState({});
-  const API_BASE = "http://localhost:4000";
+  const API_BASE = process.env.REACT_APP_API_BASE;
+  // const API_BASE = "http://localhost:4000";
   const URL = `${API_BASE}/api/courses`;
   const findCourseById = async (courseId) => {
     const response = await axios.get(

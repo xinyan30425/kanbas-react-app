@@ -12,14 +12,13 @@ function EncodingParametersInURLs() {
     title: "NodeJS Assignment",
     });
 
-  const URL = "http://localhost:4000/a5";
-
-  
+  const API_BASE = "https://kanbas-node-server-app-qcmk.onrender.com";
+  const URL = `${API_BASE}/a5`;
 
   const fetchWelcome = async () => {
-    const response = await axios.get("http://localhost:4000/a5/welcome");
+    const response = await axios.get(`${API_BASE}/a5/welcome`);
     setWelcome(response.data);
-  };
+};
   useEffect(() => {
     fetchWelcome();
   }, []);
@@ -38,17 +37,18 @@ function EncodingParametersInURLs() {
     setAssignment(response.data);
     };
 
-
-  const fetchSum = async (a, b) => {
-    const response = await
-      axios.get(`http://localhost:4000/a5/add/${a}/${b}`);
-    setResult(response.data);
+    const fetchSum = async (a, b) => {
+      const response = await
+          axios.get(`${API_BASE}/a5/add/${a}/${b}`);
+      setResult(response.data);
   };
+
   const fetchSubtraction = async (a, b) => {
     const response = await axios.get(
-      `http://localhost:4000/a5/subtract/${a}/${b}`);
+        `${API_BASE}/a5/subtract/${a}/${b}`);
     setResult(response.data);
-  };
+};
+
   useEffect(() => {fetchWelcome();}, []);
 
 return (

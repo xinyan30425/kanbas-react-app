@@ -18,12 +18,8 @@ function WorkingWithObjects() {
     const handleScoreChange = (e) => {
         setAssignment({ ...assignment, score: parseInt(e.target.value, 10) });
     };
-
-
-
-    const URL = "http://localhost:4000/a5/assignment"
-
-
+    const API_BASE = "https://kanbas-node-server-app-t9tx.onrender.com";
+    const URL = `${API_BASE}/a5/assignment`;
 
     return (
         <div>
@@ -62,18 +58,18 @@ function WorkingWithObjects() {
 
 
             <h4>Retrieving Objects</h4>
-            <a href="http://localhost:4000/a5/assignment"
+            <a href="${API_BASE}/a5/assignment`"
                 className="btn btn-primary me-2">
                 Get Assignment
             </a>
             <h4>Retrieving Properties</h4>
             <a
-                href="http://localhost:4000/a5/assignment/title"
+                href="${API_BASE}/a5/assignment/title"
                 className="btn btn-primary me-2">
                 Get Title
             </a>
             <a
-                href="http://localhost:4000/a5/assignment/score"
+                href="${API_BASE}/a5/assignment/score"
                 className="btn btn-primary me-2">
                 Get Score
             </a>
