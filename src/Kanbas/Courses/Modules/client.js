@@ -7,7 +7,6 @@ export const findModulesForCourse = async (courseId) => {
   const response = await axios
     .get(`${COURSES_URL}/${courseId}/modules`);
   return response.data;
-
 };
 
 export const createModule = async (courseId, module) => {
