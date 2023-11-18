@@ -4,11 +4,8 @@ import "./index.css";
 import AssignmentList from "./AssignmentList";
 
 
-
 function Assignments() {
-
-  const { courseId } = useParams();
-
+  const { courseId } = useParams()
   return (
     <div>
         <AssignmentList/>
