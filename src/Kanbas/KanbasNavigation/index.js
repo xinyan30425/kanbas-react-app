@@ -9,6 +9,8 @@ import {AiOutlineInbox, AiFillEdit} from "react-icons/ai";
 import {MdHistory, MdHelp} from "react-icons/md";
 import {IoMdPeople} from "react-icons/io";
 
+import profilePic from './neu.png';
+
 function KanbasNavigation() {
   const links = ["Account", "Dashboard", "Courses", "Calendar","Inbox","History","Studio","Commons","Help"];
   const linkToIconMap = {
@@ -33,6 +35,10 @@ function KanbasNavigation() {
           to={`/Kanbas/${link}`}
           className={`list-group-item ${pathname.includes(link) && "active"}`}
         >
+           {link === "Account" && (
+            <img src={profilePic} alt="Profile" className="profile-pic" />
+          )}
+          
           <div className="icon-container"> 
             {linkToIconMap[link]}
           </div>

@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
-import db from "../Database";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "./index.css";
 import paper from "./paper.png";
@@ -16,6 +15,8 @@ function Dashboard() {
         startDate: "2023-09-10",
         endDate: "2023-12-15",
     });
+    const [errorMessage, setErrorMessage] = useState("");
+
 
     const fetchCourses = async () => {
         const response = await axios.get("http://localhost:4000/api/courses");
@@ -121,8 +122,8 @@ function Dashboard() {
                                     <div className="card course-card">
                                         <div style={{ backgroundImage: `url(${paper})`, height: '150px', backgroundSize: 'cover' }}></div>
                                         <div className="card-body">
-                                            <button onClick={() => deleteCourse(courseItem._id)} className="btn btn-danger float-end">Delete</button>
-                                            <button onClick={() => startEditingCourse(courseItem)} className="btn btn-warning">Edit</button>
+                                            <button onClick={(e) => {e.preventDefault(); deleteCourse(courseItem._id);}} className="btn btn-danger float-end">Delete</button>
+                                            <button onClick={(e) => {e.preventDefault(); startEditingCourse(courseItem);}} className="btn btn-warning">Edit</button>
                                             <h5 className="card-title">{courseItem.name}</h5>
 
                                             <p className="card-text">

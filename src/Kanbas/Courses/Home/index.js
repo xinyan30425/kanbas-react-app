@@ -3,7 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import "./index.css";
 import { faFileImport, faRightFromBracket, faArrowsSpin, faChartSimple, faBullhorn, faBell } from '@fortawesome/free-solid-svg-icons';
-import { useParams } from "react-router-dom";
+
 
 function Home() {
   return (

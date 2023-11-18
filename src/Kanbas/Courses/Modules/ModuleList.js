@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect} from "react";
 import { useParams } from "react-router-dom";
-
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEllipsisV, faCircleCheck, faPlus, } from '@fortawesome/free-solid-svg-icons'
@@ -12,7 +11,6 @@ import {
     setModule,
     setModules,
 } from "./modulesReducer";
-import { findModulesForCourse, createModule } from "./client";
 import * as client from "./client";
 
 function ModuleList() {
@@ -21,14 +19,14 @@ function ModuleList() {
     const module = useSelector((state) => state.modulesReducer.module);
     const dispatch = useDispatch();
 
-    const handleAddModule = () => {
-        client.createModule(courseId, module).then((module) => {
+    const handleAddModule = async () => {
+        await client.createModule(courseId, module).then((module) => {
             dispatch(addModule(module));
         });
     };
 
-    const handleDeleteModule = (moduleId) => {
-        client.deleteModule(moduleId).then((status) => {
+    const handleDeleteModule = async (moduleId) => {
+        await client.deleteModule(moduleId).then((status) => {
             dispatch(deleteModule(moduleId));
         });
     };
@@ -102,8 +100,6 @@ function ModuleList() {
                                     <div className="title-content">
                                         {module.name}
                                         <div className="module-actions">
-                                            {/* <button onClick={() => dispatch(deleteModuleAction(module._id))} className="btn btn-danger ms-2 me-2 mt-2 mb-2 p-1">Delete</button> */}
-                                            {/* <button onClick={(event) => dispatch(setModuleAction(module))} className="btn btn-success me-2 mt-2 mb-2 p-1">Edit</button> */}
                                             <button className="btn btn-warning me-1"
                                                 onClick={() => dispatch(setModule(module))}>
                                                 Edit
