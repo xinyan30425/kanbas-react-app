@@ -36,7 +36,7 @@ function Dashboard() {
     };
 
     const addCourse = async () => {
-        const response = await axios.post(API_BASE, course);
+        const response = await axios.post(URL, course);
         setCourses([
             response.data,
             ...courses,
