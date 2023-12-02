@@ -3,6 +3,7 @@ import ErrorBoundary from './ErrorBoundary'; // adjust the path if you put it in
 import Labs from "./Labs";
 import HelloWorld from "./Labs/a3/HelloWorld";
 import Kanbas from "./Kanbas";
+import Project from "./project";
 import {HashRouter} from "react-router-dom";
 import {Routes, Route, Navigate} from "react-router";
 import { library } from '@fortawesome/fontawesome-svg-core';
@@ -17,6 +18,8 @@ function App() {
       <div>
       <ErrorBoundary>
         <Routes>
+          <Route path = "/" element = {<Navigate to = "project" />}/>
+          <Route path = "/project/*" element = {<Project />}/>
           <Route path="/"         element={<Navigate to="/Labs"/>}/>
           <Route path="/hello"    element={<HelloWorld/>}/>
           <Route path="/Labs/*"   element={<Labs/>}/>
