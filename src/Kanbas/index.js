@@ -1,11 +1,18 @@
 import KanbasNavigation from "./KanbasNavigation";
 import { Routes, Route, Navigate } from "react-router-dom";
-import Account from "./Account";
+// import Account from "./Account";
 import Courses from "./Courses";
 import Dashboard from "./Dashboard";
 import CourseNavigation from "./Courses/CourseNavigation";
+import UserTable from "./Users/tables";
+import SignIn from "./Users/signin";
+import Signup from "./Users/signup";
+import Account from "./Users/account";
+
+
+
 import db from "./Database";
-import { useState,useEffect } from "react";
+import { useState, useEffect } from "react";
 import store from "./store";
 import { Provider } from "react-redux";
 import axios from "axios";
@@ -50,21 +57,21 @@ function Kanbas() {
   };
 
   const findAllCourses = async () => {
-  const response = await axios.get(URL);
+    const response = await axios.get(URL);
     setCourses(response.data);
   };
 
   const [course, setCourse] = useState({
-      name: "New Course",
-      number: "New Number",
-      startDate: "2023-09-10",
-      endDate: "2023-12-15",
+    name: "New Course",
+    number: "New Number",
+    startDate: "2023-09-10",
+    endDate: "2023-12-15",
   });
 
   const [newCourseName, setNewCourseName] = useState("");
   const [editingId, setEditingId] = useState(null);
   const [editingCourse, setEditingCourse] = useState({ name: "", _id: "", number: "", startDate: "", endDate: "" });
-  
+
 
   useEffect(() => {
     findAllCourses();
@@ -72,38 +79,44 @@ function Kanbas() {
 
   return (
     <Provider store={store}>
-    <div>
       <div>
-        <KanbasNavigation />
-        <div style={{ marginLeft: '150px' }}>
-          <Routes>
-            <Route path="/" element={<Navigate to="Dashboard" />} />
-            <Route path="Account" element={<h1>Account</h1>} />
-            {/* <Route path="Dashboard" element={<Dashboard />} /> */}
-            <Route path="Dashboard" element={
-            <Dashboard/>
-            // courses={courses}
-            // course={course}
-            // setCourse={setCourse}
-            // addNewCourse={addCourse}
-            // deleteCourse={deleteCourse}
-            // updateCourse={updateCourse}
-          } />
+        <div>
+          <KanbasNavigation />
+          <div style={{ marginLeft: '150px' }}>
+            <Routes>
+              <Route path="/" element={<Navigate to="Dashboard" />} />
+              <Route path="/signin" element={<SignIn />} />
+              <Route path="/signup" element={<Signup />} />
+              <Route path="/account" element={<Account />} />
+              <Route path="/account/:id" element={<Account />} />
+              <Route path="/users" element={<UserTable />} />
 
-            {/* <Route path="Courses" element={<CourseNavigation/>} /> */}
-            <Route path="Courses" element={<Navigate to={`/Kanbas/Courses/${db.courses[0]._id}/Home`} />} />
-            {/* <Route path="Courses/:courseId/*" element={<Courses />} /> */}
-            <Route path="Courses/:courseId/*" element={<Courses courses={courses} />} />
-            <Route path="Calendar" element={<h1>Calendar</h1>} />
-            <Route path="Inbox" element={<h1>Inbox</h1>} />
-            <Route path="History" element={<h1>History</h1>} />
-            <Route path="Studio" element={<h1>Studio</h1>} />
-            <Route path="Commons" element={<h1>Commons</h1>} />
-            <Route path="Help" element={<h1>Help</h1>} />
-          </Routes>
+
+              {/* <Route path="Dashboard" element={<Dashboard />} /> */}
+              <Route path="Dashboard" element={
+                <Dashboard />
+                // courses={courses}
+                // course={course}
+                // setCourse={setCourse}
+                // addNewCourse={addCourse}
+                // deleteCourse={deleteCourse}
+                // updateCourse={updateCourse}
+              } />
+
+              {/* <Route path="Courses" element={<CourseNavigation/>} /> */}
+              <Route path="Courses" element={<Navigate to={`/Kanbas/Courses/${db.courses[0]._id}/Home`} />} />
+              {/* <Route path="Courses/:courseId/*" element={<Courses />} /> */}
+              <Route path="Courses/:courseId/*" element={<Courses courses={courses} />} />
+              <Route path="Calendar" element={<h1>Calendar</h1>} />
+              <Route path="Inbox" element={<h1>Inbox</h1>} />
+              <Route path="History" element={<h1>History</h1>} />
+              <Route path="Studio" element={<h1>Studio</h1>} />
+              <Route path="Commons" element={<h1>Commons</h1>} />
+              <Route path="Help" element={<h1>Help</h1>} />
+            </Routes>
+          </div>
         </div>
       </div>
-    </div>
     </Provider>
   );
 }

@@ -12,7 +12,7 @@
     align-items: center; 
     justify-content: center; 
     text-align: center; 
-    padding: 10px; 
+    padding: 4px; 
     color: white; 
     text-decoration: none;
     background-color: black; /* Default background color set to black */
@@ -34,24 +34,23 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 5px 0; 
+    margin: 2px 0; 
 }
 
 .wd-kanbas-navigation .wd-icon {
     color: red; 
-    font-size: 3em; 
+    font-size: 2em; 
 }
 
 .wd-kanbas-navigation .ac-icon {
     color: grey; 
-    font-size: 3em; 
+    font-size: 2em; 
 }
 
 .profile-pic {
-    width: 80px; /* Adjust the size as needed */
+    width: 60px; /* Adjust the size as needed */
     height: auto;
     display: block;
-    margin: 0 auto 30px; /* Centers the image and adds space below */
-
+    margin: 0 auto 10px; /* Centers the image and adds space below */
   }
 

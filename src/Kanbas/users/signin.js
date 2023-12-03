@@ -12,7 +12,7 @@ function SignIn() {
       const credentials = { username: username, password: password };
       const user = await client.signin(credentials);
       console.log("Sign-in response:", user);
-      navigate("/project/account");
+      navigate("/kanbas/account");
     } catch (error) {
       setError(error);
       console.error("Sign-in error:", error);
