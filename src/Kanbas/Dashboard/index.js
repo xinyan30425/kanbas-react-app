@@ -6,7 +6,7 @@ import "./index.css";
 import paper from "./paper.png";
 
 function Dashboard() {
-    const API_BASE  = "https://kanbas-node-server-app-qcmk.onrender.com";
+    const API_BASE  = process.env.REACT_APP_API_BASE;
     const URL = `${API_BASE}/api/courses`;
 
     const [courses, setCourses] = useState([]);

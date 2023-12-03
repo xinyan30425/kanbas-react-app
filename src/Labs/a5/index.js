@@ -4,11 +4,13 @@ import WorkingWithObjects from "./WorkingWithObjects";
 
 
 function Assignment5() {
+  const API_BASE =process.env.REACT_APP_API_BASE;
+
   return (
     <div>
       <h1>Assignment 5</h1>
       <div className="list-group">
-        <a href="https://kanbas-node-server-app-qcmk.onrender.com"
+        <a href={`${API_BASE}`} 
           className="list-group-item">
           Welcome
         </a>

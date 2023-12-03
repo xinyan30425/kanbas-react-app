@@ -18,7 +18,7 @@ function WorkingWithObjects() {
     const handleScoreChange = (e) => {
         setAssignment({ ...assignment, score: parseInt(e.target.value, 10) });
     };
-    const API_BASE = "https://kanbas-node-server-app-t9tx.onrender.com";
+    const API_BASE = process.env.REACT_APP_API_BASE;
     const URL = `${API_BASE}/a5/assignment`;
 
     return (
@@ -58,7 +58,7 @@ function WorkingWithObjects() {
 
 
             <h4>Retrieving Objects</h4>
-            <a href="${API_BASE}/a5/assignment`"
+            <a href={`${API_BASE}/a5/assignment`}
                 className="btn btn-primary me-2">
                 Get Assignment
             </a>

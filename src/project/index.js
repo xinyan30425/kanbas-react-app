@@ -1,12 +1,8 @@
 import Home from "./home";
-import Profile from "./profile";
-import Search from "./search";
-import Details from "./details";
 import { Routes, Route, Link} from "react-router-dom";
 import { useNavigate, useParams } from "react-router-dom";
 import { useState } from "react";
 import UserTable from "./users/tables";
-import UserDetails from "./users/details";
 import SignIn from "./users/signin";
 import Signup from "./users/signup";
 import Account from "./users/account";
@@ -32,15 +28,9 @@ function Project() {
                         <Link to="/project/account" className="list-group-item">
                             Account
                         </Link>
-                        <Link to="/project/search" className="list-group-item">
-                            Search
-                        </Link>
                         <Link to="/project/users" className="list-group-item">
                             Users
                         </Link>
-                        {/* <Link to="/project/details" className="list-group-item">
-              Details
-            </Link> */}
                     </div>
                 </div>
                 <div className="col-10">
@@ -51,11 +41,7 @@ function Project() {
                         <Route path="/signup" element={<Signup />} />
                         <Route path="/account" element={<Account />} />
                         <Route path="/account/:id" element={<Account />} />
-                        <Route path="/search" element={<Search />} />
-                        <Route path="/search/:search" element={<Search />} />
-                        <Route path="/details/:albumId" element={<Details />} />
                         <Route path="/users" element={<UserTable />} />
-                        <Route path="/users/:id" element={<UserDetails />} />
                     </Routes>
                 </div>
             </div>

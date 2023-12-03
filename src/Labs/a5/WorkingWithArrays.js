@@ -95,7 +95,7 @@ function WorkingWithArrays() {
     setTodos(updatedTodos);
   };
 
-  const API_BASE ="https://kanbas-node-server-app-qcmk.onrender.com";
+  const API_BASE =process.env.REACT_APP_API_BASE;
   const API = `${API_BASE}/a5/todos`;
 
   return (
@@ -176,7 +176,7 @@ function WorkingWithArrays() {
       </a>
 
       {/* Link to Get All Todos */}
-      <a href={API} className="btn btn-primary me-2">
+      <a href={`${API}`} className="btn btn-primary me-2">
         Get Todos
       </a>
       {/* Input for Retrieving Todo by ID */}
