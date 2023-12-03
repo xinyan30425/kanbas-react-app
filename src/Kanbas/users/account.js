@@ -5,19 +5,12 @@ function Account() {
     const { id } = useParams();
     const [account, setAccount] = useState(null);
     const navigate = useNavigate();
-    // const fetchAccount = async () => {
-    //     const account = await client.account();
-    //     setAccount(account);
-    // };
-    // const updateUser = async () => {
-    //     const status = await client.updateUser(user._id, user);
-    // };
 
     const signout = async () => {
         await client.signout();
-        navigate("/project/signin");
-      };
-    
+        navigate("/kanbas/signin");
+    };
+
 
     const fetchAccount = async () => {
         try {
@@ -26,7 +19,7 @@ function Account() {
             setAccount(account);
         } catch (error) {
             console.error("Error fetching account:", error); // Error log
-            navigate("/project/signin");
+            navigate("/kanbas/signin");
         }
     };
 
@@ -39,7 +32,7 @@ function Account() {
         try {
             await client.updateUser(account._id, account);
             console.log("Account updated successfully");
-            navigate("/project/users");
+            navigate("/kanbas/users");
         } catch (error) {
             console.error("Error updating account:", error);
         }
@@ -47,11 +40,11 @@ function Account() {
 
     useEffect(() => {
         if (id) {
-          findUserById(id);
+            findUserById(id);
         } else {
-          fetchAccount();
+            fetchAccount();
         }
-      }, []);
+    }, []);
 
     // useEffect(() => {
     //     fetchAccount();
@@ -104,14 +97,9 @@ function Account() {
                     <button onClick={save}>
                         Save
                     </button>
-                    <Link to="/project/admin/users" className="btn btn-warning w-100">
+                    <Link to="/kanbas/users" className="btn btn-warning w-100">
                         Users
                     </Link>
-
-                    {/* <button onclick={updateUser} className="btn btn-primary">
-                        Update
-                    </button> */}
-
                     <button onClick={signout} className="btn btn-primary">
                         Signout
                     </button>
