@@ -18,7 +18,7 @@ function App() {
       <div>
       <ErrorBoundary>
         <Routes>
-          <Route path = "/" element = {<Navigate to = "project" />}/>
+          <Route path = "/" element = {<Navigate to = "Kanbas" />}/>
           <Route path = "/project/*" element = {<Project />}/>
           <Route path="/"         element={<Navigate to="/Labs"/>}/>
           <Route path="/hello"    element={<HelloWorld/>}/>
