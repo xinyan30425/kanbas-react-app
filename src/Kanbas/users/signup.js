@@ -47,7 +47,7 @@ function Signup() {
           lastName: e.target.value
         })}
         placeholder="Enter your last name" />
-      <input
+      {/* <input
         value={credentials.role}
         onChange={(e) => setCredentials({
           ...credentials,
@@ -61,7 +61,7 @@ function Signup() {
           ...credentials,
           email: e.target.value
         })}
-        placeholder="Enter your email" />
+        placeholder="Enter your email" /> */}
 
       <button onClick={signup}>
         Signup
