@@ -1,3 +1,64 @@
+# Kanbas Full-Stack Application
+This project is an innovative online education management system, combining the features of a Kanbas-style task management application with the specific needs of educational environments. It's designed to cater to both students and professors, providing distinct interfaces for each user type.
+
+## Frontend Deployed to Netlify
+Access the live application here:
+https://react-kanbas.netlify.app/#/Kanbas/Dashboard
+
+![](readmepic/dashboard.png)
+![](readmepic/assignment.png)
+![](readmepic/course.png)
+![](readmepic/user.png)
+
+
+## Highlights
+- Professor Interface:
+Ability to post lectures, course materials, grades, and assignments.
+Options to manage and update student profiles.
+Interactive dashboard to overview course progress and student performance.
+
+- Student Interface:
+Access to lectures, course materials, and grades.
+Ability to submit assignments and track deadlines.
+Personalized dashboard to view course tasks and schedules.
+
+- Task Management (Kanbas-style):
+Both students and professors can create, update, and organize tasks related to courses.
+Visual task boards for tracking the progress of lectures, assignments, and grades.
+
+- Managed local component state in React using state and effect hooks for isolated state management.
+
+- Integrated Redux for managing global application state, ensuring consistency and predictability across the application.
+
+- Established a Node.js backend that interfaces with MongoDB for persistent CRUD operations.
+
+- Deployed the application on Netlify, demonstrating the ability to manage and deploy web applications in a live environment.
+
+## Features
+
+- **React.js**: Powers the dynamic front-end user interface.
+- **Redux**: Manages global state for a consistent user experience.
+- **Node.js**: Facilitates a robust backend server.
+- **MongoDB**: Ensures data persistence and enables CRUD operations.
+- **Netlify**: Hosts the application, enabling real-world accessibility.
+- **Bootstrap**: Provides a responsive layout and design.
+- **FontAwesome**: Enhances the UI with attractive icons.
+
+## Local Development Setup
+
+Before setting up the project locally, ensure Node.js, npm (or yarn), and MongoDB are installed on your machine.
+
+## Deployment
+The project is deployed on Netlify with continuous deployment from the main branch. To deploy your own version, follow these steps:
+
+Build your React application:
+```sh
+npm run build
+```
+Connect your GitHub repository to Netlify.
+
+Configure your build settings and deploy.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
